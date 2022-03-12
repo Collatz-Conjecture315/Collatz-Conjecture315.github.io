@@ -1,33 +1,100 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Processing forms with events</title>
-    </head>
-    <body>
+<html lang="en">
 
-    
-        <label>Encoded text?
-        <input id="name" type="text">
-        </label>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            height: 725px;
+            width: 100%;
+            background-image: url("https://raw.githubusercontent.com/Collatz-Conjecture315/Collatz-Conjecture315.github.io/main/mybg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity:1;
+
+        }
+    </style>
+    <title>CIPHER</title>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-light" ; style="background-color: #0f1c2c;padding-left: 10%;padding-right: 10%;" ; text color="red">
+            <div class="container-fluid">
+                <a class="navbar-brand">CIPHER</a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <br>
+                    <button class="btn btn-outline-success" type="submit" style = "border-color:black;">Search</button>
+                    <br>
+                </form>
+            </div>
+        </nav>
+
+        <form class="row gy-2 gx-3 align-items-center" style="background-color: #a8aaaa75;padding-left: 10%;padding-right:10%;">
+            <div class="col-auto text align-center">
+                <label class="visually-hidden">Enter the code</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+
+            <br>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingSelect">Choose cipher:</label>
+                <select id ="langs" class="form-select" id="autoSizingSelect">
+                    <option value="cc">Caesar Cipher</option>
+                    <option value="bc">Block Cipher</option>
+                    <option value="fc">Base 64</option>
+                </select>
+            </div>
+            <br>
+            <div class="col-auto text align-center">
+                <label class="visually-hidden">Enter the key</label>
+                <input type="text" class="form-control" id="key">
+            </div>
+            <br>
+            
+            <div class="col-auto">
+            </div>
+            <div class="col-auto">
+                <button id = "button" type="button">Decode</button>
+            </div>
+        </form><br>
         <br>
-        <label>Which cipher would you like?
-        <select id="lang">
-            <option value="cc">Caesar Cipher</option>
-            <option value="bc">Block Cipher</option>
-            <option value="r13">ROT13</option>
-        </select>
-        </label>
         <br>
-        <label>Enter your key 
-          <input id = "key" type = "text">
-        </label>
-        <button id="button" type="button">Decode</button>
-        <div id="message"></div>
+        <br>
+
+        <p1  id = "mypara" style ="color:rgb(179, 179, 179)" style="background-color:rgba(30, 143, 255, 0.315);font-size: small;font-family:Arial;"><b>
+            The Caesar cipher is one of the oldest forms of cryptography in recorded history, with instances stretching
+            back long before it was first named. Nonetheless, the cipher finds itself named for, and consistently
+            associated with, the famous Roman Emperor and General Julius Caesar. It was Caesar who reportedly used the
+            cipher with a shift of three to encode military messages to his commanders while on a campaign. After his
+            assassination, Caesar's nephew Augustus carried on his uncle’s usage of the cipher to protect his
+            correspondence but changed his messages encryption to a right shift of one. Despite the presence of more
+            complex codes, the cipher was likely favored by the emperors due to its simplicity. The cipher was likely
+            effective due to the illiteracy of many of those who would intercept them and a common misconception that
+            the messages were written in a mysterious foreign language. Enforcing this assumption of security is the
+            lack of evidence that any methods for solving substitution ciphers existed at the time, with the first
+            instances of frequency analysis appearing in the middle east centuries after Caesar's death.<br>
+
+            Despite its growing ineffectiveness in the modern era, the cipher would nonetheless remain in use by various
+            groups for less vital communications such as by Jewish groups to encrypt the name of god on the mezuzah and
+            later by people wishing to exchange messages in plain view by posting encoded passages in newspapers.
+            Nevertheless, the last major use of the cipher for warfare was by imperial Russian forces in the first world
+            war due to the common soldiers struggling to understand more complex encryption methods. A choice that was
+            found to be a failure as contemporary German and Austrian code-breakers were easily able to decipher any
+            messages sent in the code.<br>
+
+            Regardless of being phased out well over a century ago, the Caesar cipher has not fallen out of use
+            entirely. In 2006 a Sicilian mob boss named Bernardo Provenzano was captured by police due to his usage of
+            an altered version of the Caesar cipher where letters were replaced by numbers after their shift. Likewise
+            in 2011, a British counter-terrorist operation foiled a planned airline bombing due to the usage of an
+            easily breakable Caesar cipher by the perpetrators in their internet communications.
+            </b>
+        </p1>
     </div>
-    
-  <script src = "myjs.js"></script>
-  </script>
+    <script src="myjs.js"></script>
 
-    </body>
+</body>
+
 </html>
