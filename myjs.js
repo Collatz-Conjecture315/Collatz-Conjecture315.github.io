@@ -2,11 +2,14 @@
   // Step 1: Find the element we want the event on
   var button = document.getElementById("button");
   // Step 2: Dine the event listener function
+  //document.write("Hello Wolrd!!!!");
+  //var key = document.getElementById("key").value;
+  //document.getElementById("mypara").innerHTML+=key;
   
 
   var onButtonClick = function() {
-
-    var cipher = document.getElementById("lang").value;
+    document.getElementById("mypara").innerHTML="Result is: ";
+    var cipher = document.getElementById("langs").value;
     var name = document.getElementById("name").value;
     var newname = name;
     var key = document.getElementById("key").value;
@@ -21,23 +24,24 @@
     }
 
     if (cipher==="cc"){
-
+      //document.getElementById("mypara").style.size=large;
+       
    for (i=0;i<newname.length;i++){
      var ascii = newname.charCodeAt(i)-key;
 
     if (96<ascii && ascii<123){
      var t = String.fromCharCode(newname.charCodeAt(i)-key);
-     document.write(t);
+     document.getElementById("mypara").innerHTML+=t;
    } else if(90<ascii && ascii<97){
     var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
-    document.write(t);
+    document.getElementById("mypara").innerHTML+=t;
   } 
     else if(64<ascii &&ascii<91){
     var t = String.fromCharCode(newname.charCodeAt(i)-key);
-    document.write(t);
+    document.getElementById("mypara").innerHTML+=t;
   }else if( ascii<65){
     var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
-    document.write(t);
+    document.getElementById("mypara").innerHTML+=t;
   }
   }
    }
@@ -46,11 +50,12 @@
   var len = newname.length-key;
   for(i=len;i<newname.length;i++){
     var element = newname[i];
-    document.write(element);
+    document.getElementById("mypara").innerHTML+=element;
+    
   }
   for(i=0;i<newname.length-key;i++){
     var element = newname[i];
-    document.write(element);
+    document.getElementById("mypara").innerHTML+=element;
   }
 
   
