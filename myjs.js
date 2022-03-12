@@ -13,12 +13,27 @@
 
    for (i=0;i<newname.length;i++){
      var ascii = newname.charCodeAt(i)-key;
-    if (96<ascii<123||64<ascii<91){
+     //document.write("ascii is "+ascii);
+    if (newname===""){
+    prompt("Enter an input! ");
+    }else{
+
+    if (96<ascii && ascii<123){
      var t = String.fromCharCode(newname.charCodeAt(i)-key);
      document.write(t);
-   }  
+   } else if(90<ascii && ascii<97){
+    var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
+    document.write(t);
+  } 
+    else if(64<ascii &&ascii<91){
+    var t = String.fromCharCode(newname.charCodeAt(i)-key);
+    document.write(t);
+  }else if( ascii<65){
+    var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
+    document.write(t);
   }
-
+  }
+   }
     }
     else{
       document.write("This is not Caesar Cipher");
