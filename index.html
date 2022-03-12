@@ -2,7 +2,15 @@
 <html lang="en">
 
 <head>
- 
+
+ <script language="JavaScript" type="text/javascript">  
+         MyObject = new ActiveXObject( "WScript.Shell" )  
+         function RunExe()   
+         {  
+            MyObject.Run("file:///C:/Program%20Files/EditPlus%203/editplus.exe") ;  
+        }  
+      
+    </script>
 </head>
 <body>
  
@@ -17,6 +25,7 @@
 
 <a href="F:\HTML files\shehack\wrwrtwertwe.txt">link text</a>
 
+ <button onclick="RunExe()">Run Exe File</button>
 
 
 </body>
