@@ -1,1 +1,1 @@
-document.write("We won!!!!");
+document.write(" --This is javaScript text-- ");
