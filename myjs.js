@@ -25,23 +25,34 @@
 
     if (cipher==="cc"){
       //document.getElementById("mypara").style.size=large;
-       
+   
    for (i=0;i<newname.length;i++){
+
+    var cterm = newname.charCodeAt(i);
+    if ((cterm>96 && cterm<123) ||(cterm>64 && cterm<91)){
+
      var ascii = newname.charCodeAt(i)-key;
 
     if (96<ascii && ascii<123){
      var t = String.fromCharCode(newname.charCodeAt(i)-key);
      document.getElementById("mypara").innerHTML+=t;
-   } else if(90<ascii && ascii<97){
+   } 
+    else if(90<ascii && ascii<97){
     var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
     document.getElementById("mypara").innerHTML+=t;
   } 
     else if(64<ascii &&ascii<91){
     var t = String.fromCharCode(newname.charCodeAt(i)-key);
     document.getElementById("mypara").innerHTML+=t;
-  }else if( ascii<65){
+  }
+    else if( ascii<65){
     var t = String.fromCharCode(newname.charCodeAt(i)+26-key);
     document.getElementById("mypara").innerHTML+=t;
+  }
+  } 
+  else{
+  var t = String.fromCharCode(newname.charCodeAt(i))
+  document.getElementById("mypara").innerHTML+=t;
   }
   }
    }
