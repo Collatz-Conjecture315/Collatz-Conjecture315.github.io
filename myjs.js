@@ -42,7 +42,20 @@
   }
    }
     
-    else{
+  else if(cipher==="bc"){
+  var len = newname.length-key;
+  for(i=len;i<newname.length;i++){
+    var element = newname[i];
+    document.write(element);
+  }
+  for(i=0;i<newname.length-key;i++){
+    var element = newname[i];
+    document.write(element);
+  }
+
+  
+    
+  }else{
       document.write("This is not Caesar Cipher");
     }
       
