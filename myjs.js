@@ -1,1 +1,1 @@
-var new_tag = document.innerHTML("testing");
+document.write("We won!!!!");
