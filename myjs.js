@@ -14,18 +14,18 @@
     var newname = name;
     var key = document.getElementById("key").value;
 
-     if (newname.length===0){
-      alert("Enter an input! ")
-      //break;
-      }
-    if (key.length==0){
-      alert("Enter a key! ")
-      //break;
-    }
-
+    
     if (cipher==="cc"){
       //document.getElementById("mypara").style.size=large;
    
+      if (newname.length===0){
+        alert("Enter an input! ")
+        //break;
+        }
+      if (key.length==0){
+        alert("Enter a key! ")
+        //break;
+      }
    for (i=0;i<newname.length;i++){
 
     var cterm = newname.charCodeAt(i);
@@ -58,6 +58,16 @@
    }
     
   else if(cipher==="bc"){
+
+  
+    if (newname.length===0){
+      alert("Enter an input! ")
+      //break;
+      }
+    if (key.length==0){
+      alert("Enter a key! ")
+      //break;
+    }
   var len = newname.length-key;
   for(i=len;i<newname.length;i++){
     var element = newname[i];
@@ -71,11 +81,43 @@
 
   
     
-  }else{
-      document.write("This is not Caesar Cipher");
+  }else if(cipher==="fc"){
+
+  
+    if (newname.length===0){
+      alert("Enter an input! ")
+      //break;
+      }
+    
+    for (i=0;i<newname.length;i++){
+      var element = newname[i];
+      if(i===(newname.length-1)){
+
+        document.getElementById("test").innerHTML+=element;
+        var t = String.fromCharCode(document.getElementById("test").innerHTML);
+        //document.getElementById("sample").innerHTML+=element;
+        document.getElementById("mypara").innerHTML+=t; 
+        document.getElementById("test").innerHTML="";
+      }else{
+        if(element===" "){
+          
+          var t = String.fromCharCode(document.getElementById("test").innerHTML);
+          document.getElementById("mypara").innerHTML+=t;
+          document.getElementById("test").innerHTML="";
+          //document.getElementById("sample").innerHTML+=element;
+        }else{
+          
+          document.getElementById("test").innerHTML+=element;
+        }
+          }
+
+      }
+    }
+      //document.write("This is not Caesar Cipher");
+
     }
       
-  };
+  ;
   // Step 3: Attach event listener to element
   button.addEventListener("click", onButtonClick);
 
